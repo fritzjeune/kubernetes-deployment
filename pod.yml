@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: react-test
+  labels:
+    name: react-test
+spec:
+  containers:
+  - name: react
+    image: teracy/create-react-app
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+    - containerPort: 80
